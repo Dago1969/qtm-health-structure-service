@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/health")
 @RequiredArgsConstructor
 public class HealthStructureController {
     private final ASLRepository aslRepository;
