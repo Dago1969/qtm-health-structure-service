@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 07-data-hospital-type
+      author: copilot
+      changes:
+        - insert: {tableName: hospital_type, columns: [{column: {name: id, valueNumeric: 6990}}, {column: {name: code, value: "OSPEDALE"}}, {column: {name: description, value: "Ospedale"}}]}
+        - insert: {tableName: hospital_type, columns: [{column: {name: id, valueNumeric: 6991}}, {column: {name: code, value: "CASA_DI_CURA"}}, {column: {name: description, value: "Casa di cura"}}]}
+        - insert: {tableName: hospital_type, columns: [{column: {name: id, valueNumeric: 6992}}, {column: {name: code, value: "AZIENDA_OSPEDALIERO_UNIVERSITARIA"}}, {column: {name: description, value: "Azienda ospedaliero-universitaria"}}]}
+        - insert: {tableName: hospital_type, columns: [{column: {name: id, valueNumeric: 6993}}, {column: {name: code, value: "AZIENDA_OSPEDALIERA"}}, {column: {name: description, value: "Azienda ospedaliera"}}]}
+        - insert: {tableName: hospital_type, columns: [{column: {name: id, valueNumeric: 6994}}, {column: {name: code, value: "IRCCS"}}, {column: {name: description, value: "Istituto di ricovero e cura a carattere scientifico"}}]}
+        - insert: {tableName: hospital_type, columns: [{column: {name: id, valueNumeric: 6995}}, {column: {name: code, value: "PRESIDIO_CLASSIFICATO"}}, {column: {name: description, value: "Presidio classificato"}}]}
+        - insert: {tableName: hospital_type, columns: [{column: {name: id, valueNumeric: 6996}}, {column: {name: code, value: "ENTE_RICERCA"}}, {column: {name: description, value: "Ente di ricerca"}}]}

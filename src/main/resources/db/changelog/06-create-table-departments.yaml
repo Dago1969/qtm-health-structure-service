@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 06-create-table-departments
+      author: copilot
+      preConditions:
+        - onFail: MARK_RAN
+          onError: HALT
+          not:
+            tableExists: {tableName: departments}
+      changes:
+        - createTable:
+            tableName: departments
+            columns:
+              - column: {name: id, type: BIGINT, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: area_funzionale, type: VARCHAR(255)}
+              - column: {name: reparto, type: VARCHAR(255)}
+              - column: {name: main_responsibilities, type: TEXT}
+              - column: {name: example_symptoms, type: TEXT}
+              - column: {name: emergenza_urgenza, type: BOOLEAN}
+              - column: {name: notes, type: TEXT}
+              - column: {name: created_at, type: DATETIME}
+              - column: {name: updated_at, type: DATETIME}

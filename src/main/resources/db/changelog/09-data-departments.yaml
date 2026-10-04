@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 09-data-departments
+      author: copilot
+      changes:
+        - sqlFile:
+            path: db/changelog/data/departments.sql
+            relativeToChangelogFile: false
+            splitStatements: true
+            stripComments: false

@@ -9,3 +9,19 @@ databaseChangeLog:
       file: db/changelog/04-create-table-disciplina.yaml
   - include:
       file: db/changelog/05-create-table-relazioni.yaml
+  - include:
+      file: db/changelog/06-create-table-departments.yaml
+  - include:
+      file: db/changelog/07-data-hospital-type.yaml
+  - include:
+      file: db/changelog/13-fix-hospital-asl-foreign-key.yaml
+  - include:
+      file: db/changelog/08-data-asl.yaml
+  - include:
+      file: db/changelog/09-data-departments.yaml
+  - include:
+      file: db/changelog/10-data-discipline.yaml
+  - include:
+      file: db/changelog/11-data-hospital.yaml
+  - include:
+      file: db/changelog/12-data-structure-departments.yaml

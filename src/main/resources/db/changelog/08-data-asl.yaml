@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 08-data-asl
+      author: copilot
+      changes:
+        - sqlFile:
+            path: db/changelog/data/asl.sql
+            relativeToChangelogFile: false
+            splitStatements: true
+            stripComments: false

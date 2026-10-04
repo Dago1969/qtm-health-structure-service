@@ -1,0 +1,36 @@
+INSERT INTO departments (area_funzionale,reparto,main_responsibilities,example_symptoms,emergenza_urgenza,notes,created_at,updated_at) VALUES
+	 ('Emergenza e Urgenza','Pronto Soccorso (PS)','Accettazione, triage e primo trattamento delle urgenze','Traumi gravi, forti dolori improvvisi, difficoltà respiratorie acute, arresto cardiaco',1,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Emergenza e Urgenza','Terapia Intensiva / Rianimazione','Monitoraggio continuo delle funzioni vitali compromesse','Shock, insufficienza d''organo grave, post-operatorio complesso, coma',1,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Emergenza e Urgenza','Unità Coronarica (UTIC)','Terapia intensiva cardiologica','Infarto acuto del miocardio, aritmie ventricolari pericolose',1,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Medica','Medicina Generale / Interna','Visione globale del paziente e patologie non chirurgiche','Malattie croniche riacutizzate, febbri di origine ignota, polipatologie',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Medica','Cardiologia','Malattie del cuore e dei vasi sanguigni','Scompenso cardiaco, ipertensione arteriosa grave, cardiopatia ischemica',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Medica','Neurologia','Sistema nervoso centrale e periferico','Ictus, epilessia, sclerosi multipla, morbo di Parkinson, cefalee croniche',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Medica','Oncologia','Diagnosi e trattamenti medici dei tumori','Gestione di chemioterapia, immunoterapia, terapie biologiche',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Medica','Gastroenterologia','Apparato digerente, fegato e pancreas','Ulcere, reflusso gastroesofageo cronico, colite ulcerosa, cirrosi epatica',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Medica','Pneumologia','Malattie dell''apparato respiratorio','Asma, bronchite cronica (BPCO), polmoniti, apnee notturne',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Medica','Pediatria','Salute medica dei neonati, bambini e adolescenti','Infezioni acute nei minori, disturbi dello sviluppo, patologie pediatriche',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06');
+INSERT INTO departments (area_funzionale,reparto,main_responsibilities,example_symptoms,emergenza_urgenza,notes,created_at,updated_at) VALUES
+	 ('Area Medica','Geriatria','Patologie e problematiche tipiche dell''età anziana','Demenze, declino cognitivo, fragilità fisica e cognitiva dell''anziano',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Medica','Nefrologia','Malattie dei reni e gestione della dialisi','Insufficienza renale cronica o acuta, glomerulonefriti',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Medica','Ematologia','Malattie del sangue e degli organi emopoietici','Leucemie, linfomi, anemie gravi, difetti di coagulazione',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Medica','Dermatologia','Patologie della pelle, unghie e capelli','Melanomi, psoriasi grave, dermatiti complesse',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Medica','Malattie Infettive','Patologie causate da agenti infettivi','HIV/AIDS, epatiti virali, meningiti, infezioni resistenti agli antibiotici',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Chirurgica','Chirurgia Generale','Interventi sugli organi addominali e tessuti molli','Appendicite, calcoli alla cistifellea, ernie inguinali, tumori del colon',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Chirurgica','Ortopedia e Traumatologia','Ossa, articolazioni, muscoli e tendini','Fratture, lussazioni, artrosi grave (protesi), rotture di legamenti',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Chirurgica','Ostetricia e Ginecologia','Gravidanza, parto e apparato riproduttivo femminile','Assistenza al parto, cisti ovariche, fibromi uteri, monitoraggio gravidanza',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Chirurgica','Urologia','Apparato urinario e apparato genitale maschile','Calcoli renali, ipertrofia prostatica benigna, tumori della vescica',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Chirurgica','Otorinolaringoiatria (ORL)','Patologie di orecchio, naso, gola e base cranio','Tonsilliti croniche, deviazione setto nasale, otiti medie, vertigini',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06');
+INSERT INTO departments (area_funzionale,reparto,main_responsibilities,example_symptoms,emergenza_urgenza,notes,created_at,updated_at) VALUES
+	 ('Area Chirurgica','Oftalmologia (Oculistica)','Chirurgia e cura degli occhi','Cataratta, glaucoma, distacco di retina, vizi refrattivi gravi',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Chirurgica','Neurochirurgia','Interventi chirurgici sul sistema nervoso','Tumori cerebrali, aneurismi, ernie del disco lombari e cervicali',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Chirurgica','Chirurgia Vascolare','Interventi su arterie e vene','Aneurismi dell''aorta, vene varicose gravi, stenosi carotidea',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Chirurgica','Cardiochirurgia','Interventi chirurgici sul cuore e grandi vasi','Bypass aorto-coronarico, sostituzione o riparazione di valvole cardiache',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Area Chirurgica','Chirurgia Plastica e Ricostruttiva','Ripristino morfologico e funzionale dei tessuti','Ricostruzione post-oncologica (es. mammella), esiti di gravi ustioni',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Servizi di Diagnosi e Supporto','Radiologia','Diagnostica per immagini','Esecuzione e refertazione di TAC, Risonanze (RMN), RX ed Ecografie',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Servizi di Diagnosi e Supporto','Laboratorio Analisi','Analisi chimico-cliniche e microbiologiche','Esami del sangue, delle urine, tamponi, colture batteriche',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Servizi di Diagnosi e Supporto','Anatomia Patologica','Studio microscopico dei tessuti','Esami istologici su biopsie e pezzi chirurgici per diagnosi oncologiche',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Servizi di Diagnosi e Supporto','Centro Trasfusionale','Raccolta e gestione del sangue','Donazioni di sangue, preparazione di sacche per trasfusioni e plasmaferesi',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Servizi di Diagnosi e Supporto','Farmacia Ospedaliera','Gestione dei farmaci e galenica clinica','Approvvigionamento medicinali, preparazione di sacche chemioterapiche',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06');
+INSERT INTO departments (area_funzionale,reparto,main_responsibilities,example_symptoms,emergenza_urgenza,notes,created_at,updated_at) VALUES
+	 ('Riabilitazione e Lungodegenza','Medicina Riabilitativa (Fisiatria)','Recupero delle funzioni motorie o neurologiche','Riabilitazione post-ictus, post-intervento ortopedico o grave trauma',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06'),
+	 ('Riabilitazione e Lungodegenza','Lungodegenza','Cure prolungate e stabilizzazione clinica','Convalescenza guidata dopo interventi complessi in pazienti fragili',0,NULL,'2026-06-14 09:16:06','2026-06-14 09:16:06');

@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 11-data-hospital
+      author: copilot
+      changes:
+        - sqlFile:
+            path: db/changelog/data/hospital.sql
+            relativeToChangelogFile: false
+            splitStatements: true
+            stripComments: false

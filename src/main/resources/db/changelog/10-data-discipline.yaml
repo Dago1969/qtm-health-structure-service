@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 10-data-discipline
+      author: copilot
+      changes:
+        - sqlFile:
+            path: db/changelog/data/discipline.sql
+            relativeToChangelogFile: false
+            splitStatements: true
+            stripComments: false

@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 12-data-structure-departments
+      author: copilot
+      changes:
+        - sqlFile:
+            path: db/changelog/data/structure_departments.sql
+            relativeToChangelogFile: false
+            splitStatements: true
+            stripComments: false

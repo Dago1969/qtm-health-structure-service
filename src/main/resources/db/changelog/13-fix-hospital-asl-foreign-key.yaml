@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 13-fix-hospital-asl-foreign-key
+      author: copilot
+      preConditions:
+        - onFail: MARK_RAN
+          onError: HALT
+          foreignKeyConstraintExists:
+            foreignKeyName: fk_hospital_asl
+            tableName: hospital
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: hospital
+            constraintName: fk_hospital_asl
+        - addForeignKeyConstraint:
+            baseTableName: hospital
+            baseColumnNames: codice_regione, codice_asl
+            referencedTableName: asl
+            referencedColumnNames: codice_regione, codice_azienda
+            constraintName: fk_hospital_asl_code
