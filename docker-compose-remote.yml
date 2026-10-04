@@ -1,0 +1,37 @@
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  health-structure-backend:
+    image: ${HEALTH_STRUCTURE_RUNTIME_IMAGE:-eclipse-temurin:17-jre}
+    pull_policy: if_not_present
+    container_name: ${HEALTH_STRUCTURE_BACKEND_CONTAINER_NAME}
+    restart: unless-stopped
+    working_dir: /opt/app
+    command: ["java", "-jar", "/opt/app/${HEALTH_STRUCTURE_APP_JAR}"]
+    volumes:
+      - ./backend/app:/opt/app:ro
+    env_file:
+      - .env
+    networks:
+      qtm-net:
+        aliases:
+          - qtm-health-structure-backend
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=${HEALTH_STRUCTURE_NETWORK}"
+      - "traefik.http.routers.${HEALTH_STRUCTURE_BACKEND_CONTAINER_NAME}.rule=Host(`${HEALTH_STRUCTURE_DOMAIN}`) && PathPrefix(`/api/health-structure`)"
+      - "traefik.http.routers.${HEALTH_STRUCTURE_BACKEND_CONTAINER_NAME}.priority=${HEALTH_STRUCTURE_BACKEND_ROUTER_PRIORITY}"
+      - "traefik.http.routers.${HEALTH_STRUCTURE_BACKEND_CONTAINER_NAME}.entrypoints=websecure"
+      - "traefik.http.routers.${HEALTH_STRUCTURE_BACKEND_CONTAINER_NAME}.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.${HEALTH_STRUCTURE_BACKEND_CONTAINER_NAME}.service=${HEALTH_STRUCTURE_BACKEND_CONTAINER_NAME}"
+      - "traefik.http.services.${HEALTH_STRUCTURE_BACKEND_CONTAINER_NAME}.loadbalancer.server.port=${HEALTH_STRUCTURE_BACKEND_INTERNAL_PORT}"
+    logging: *default-logging
+
+networks:
+  qtm-net:
+    external: true
+    name: ${HEALTH_STRUCTURE_NETWORK}
