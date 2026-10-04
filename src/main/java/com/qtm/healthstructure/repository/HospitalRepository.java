@@ -1,0 +1,3 @@
+package com.qtm.healthstructure.repository;
+import com.qtm.healthstructure.entity.HospitalEntity; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*;
+public interface HospitalRepository extends JpaRepository<HospitalEntity,Long> { Optional<HospitalEntity> findByCodiceAslAndCodiceStruttura(String asl,String structure); Optional<HospitalEntity> findTopByCodiceStrutturaOrderByIdAsc(String structure); }

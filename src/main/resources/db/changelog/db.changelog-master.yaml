@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/01-create-table-asl.yaml
+  - include:
+      file: db/changelog/02-create-table-ospedale.yaml
+  - include:
+      file: db/changelog/03-create-table-dipartimento.yaml
+  - include:
+      file: db/changelog/04-create-table-disciplina.yaml
+  - include:
+      file: db/changelog/05-create-table-relazioni.yaml

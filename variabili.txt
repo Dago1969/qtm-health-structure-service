@@ -1,0 +1,12 @@
+# Variabili runtime qtm-health-structure-service
+# Le variabili con valore tra parentesi sono opzionali se il default e' adeguato.
+
+SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/qtmhealthstructure?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+SPRING_DATASOURCE_USERNAME=root
+SPRING_DATASOURCE_PASSWORD=dago
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=qtmhealthstructure
+DB_USERNAME=qtmuser
+DB_PASSWORD=qtm_pass
+SERVER_PORT=8089

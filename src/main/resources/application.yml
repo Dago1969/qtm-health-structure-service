@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: qtm-health-structure-service
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:qtmhealthstructure}?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${SPRING_DATASOURCE_USERNAME:${DB_USERNAME:qtmuser}}
+    password: ${SPRING_DATASOURCE_PASSWORD:${DB_PASSWORD:qtm_pass}}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+server:
+  port: ${SERVER_PORT:8089}
+  servlet:
+    context-path: /api/health-structure

@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: 02-create-table-ospedale
+      author: copilot
+      preConditions:
+        - onFail: MARK_RAN
+          onError: HALT
+          not:
+            tableExists: {tableName: hospital_type}
+      changes:
+        - createTable:
+            tableName: hospital_type
+            columns:
+              - column: {name: id, type: BIGINT, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: code, type: VARCHAR(100), constraints: {nullable: false, unique: true}}
+              - column: {name: description, type: VARCHAR(500)}
+        - createTable:
+            tableName: hospital
+            columns:
+              - column: {name: id, type: BIGINT, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: anno, type: INT}
+              - column: {name: codice_regione, type: VARCHAR(10)}
+              - column: {name: regione, type: VARCHAR(200)}
+              - column: {name: codice_asl, type: VARCHAR(50)}
+              - column: {name: asl, type: VARCHAR(200)}
+              - column: {name: codice_struttura, type: VARCHAR(50)}
+              - column: {name: struttura, type: VARCHAR(500)}
+              - column: {name: comune, type: VARCHAR(200)}
+              - column: {name: sigla_provincia, type: VARCHAR(20)}
+              - column: {name: indirizzo, type: VARCHAR(500)}
+              - column: {name: tipo_struttura, type: VARCHAR(200)}
+              - column: {name: hospital_type_id, type: BIGINT}
+              - column: {name: asl_id, type: BIGINT}
+              - column: {name: city_id, type: BIGINT}
+        - addUniqueConstraint:
+            tableName: hospital
+            columnNames: codice_asl, codice_struttura
+            constraintName: uk_hospital_asl_structure
