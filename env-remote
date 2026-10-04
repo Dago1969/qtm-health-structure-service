@@ -1,9 +1,11 @@
-# Copiare questo file in .env e modificare i valori per il server remoto.
+# Configurazione Principale
+SERVICE_NAME=qtm-health-structure-service
+DB_NAME=qtmhealthstructure
 
 # Runtime Java; il JAR viene montato dalla cartella locale backend/app.
 HEALTH_STRUCTURE_RUNTIME_IMAGE=eclipse-temurin:17-jre
-HEALTH_STRUCTURE_BACKEND_CONTAINER_NAME=qtm-health-structure-service
-HEALTH_STRUCTURE_APP_JAR=qtm-health-structure-service-1.0.0.jar
+HEALTH_STRUCTURE_BACKEND_CONTAINER_NAME=${SERVICE_NAME}
+HEALTH_STRUCTURE_APP_JAR=${SERVICE_NAME}.jar
 HEALTH_STRUCTURE_NETWORK=qtm-net
 HEALTH_STRUCTURE_BACKEND_INTERNAL_PORT=8089
 
@@ -12,14 +14,15 @@ HEALTH_STRUCTURE_DOMAIN=health-structure.example.com
 HEALTH_STRUCTURE_BACKEND_ROUTER_PRIORITY=100
 
 # Spring datasource
-SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/qtmhealthstructure?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
 SPRING_DATASOURCE_USERNAME=root
 SPRING_DATASOURCE_PASSWORD=qtm@dev#pwd33
-DB_HOST=mysql
+DB_HOST=qtm-mariadb
 DB_PORT=3306
 DB_NAME=qtmhealthstructure
 DB_USERNAME=root
 DB_PASSWORD=qtm@dev#pwd33
-SERVER_PORT=8089
+SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/${DB_NAME}?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+
+SERVER_PORT=8080
 SERVER_SERVLET_CONTEXT_PATH=/api/health-structure
 APP_CORS_ALLOWED_ORIGINS=https://dashboard.qtmdev.quicare.com,https://tenants.qtmdev.quicare.com,https://ticket.qtmdev.quicare.com
