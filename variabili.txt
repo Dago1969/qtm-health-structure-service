@@ -10,3 +10,20 @@ DB_NAME=qtmhealthstructure
 DB_USERNAME=qtmuser
 DB_PASSWORD=qtm_pass
 SERVER_PORT=8089
+
+# Variabili sicurezza e deployment remoto
+APP_KEYCLOAK_SERVER_URL=https://auth.example.com
+APP_KEYCLOAK_REALM_CODE=CHANGE_ME
+APP_KEYCLOAK_ISSUER_URI=https://auth.example.com/realms/CHANGE_ME
+APP_CORS_ALLOWED_ORIGINS=https://dashboard.example.com,https://tenants.example.com,https://ticket.example.com
+SERVER_SERVLET_CONTEXT_PATH=/api/health-structure
+JAVA_RUNTIME_IMAGE=eclipse-temurin:17-jre-alpine
+SERVICE_NAME=qtm-health-structure-service
+SERVICE_CONTAINER_NAME=qtm-health-structure-service
+SERVICE_NETWORK_ALIAS=qtm-health-structure-backend
+SERVICE_JAR=qtm-health-structure-service-1.0.0.jar
+SERVICE_NETWORK=qtm-net
+SERVICE_INTERNAL_PORT=8089
+SERVICE_PATH=/api/health-structure
+SERVICE_DOMAIN=health-structure.example.com
+SERVICE_ROUTER_PRIORITY=100
